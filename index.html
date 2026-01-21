@@ -114,27 +114,26 @@
             font-size: 1.15rem;
         }
 
-        /* Education Image Gallery Styles */
-        .edu-gallery {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .edu-img {
-            width: calc(50% - 10px);
-            min-width: 200px;
-            height: 180px; /* Adjusted height for better visibility */
+        /* Image Display Styles for Projects and Education */
+        .display-img {
+            width: 100%;
             border-radius: 8px;
             object-fit: cover;
             border: 1px solid var(--border);
+            margin-top: 15px;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-        .edu-img:hover {
-            transform: scale(1.05);
+        .display-img:hover {
+            transform: scale(1.02);
             border-color: var(--photonics-cyan);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            width: 100%;
         }
 
         .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
@@ -162,7 +161,7 @@
 
         @media (max-width: 600px) {
             .card { flex-direction: column; text-align: center; }
-            .edu-img { width: 100%; }
+            .gallery-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -226,9 +225,9 @@
             <div style="color: var(--accent-color); font-size: 0.95rem;">IIT Bombay | 2021 – 2024</div>
             <p style="margin: 10px 0;">Specialization: Integrated Circuits and Systems</p>
             
-            <div class="edu-gallery">
-                <img src="IITB/HSSICS_TEAM.jpg" alt="HSSICs Team" class="edu-img">
-                <img src="IITB/CONVOCATION.jpeg" alt="Convocation" class="edu-img">
+            <div class="gallery-grid">
+                <img src="IITB/HSSICS_TEAM.jpg" alt="HSSICs Team" class="display-img">
+                <img src="IITB/CONVOCATION.jpeg" alt="Convocation" class="display-img">
             </div>
         </div>
     </div>
@@ -246,18 +245,20 @@
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="card" style="margin:0; min-height: 200px;">
+                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">10Gbps Optoelectronic Receiver</div>
                         <p style="font-size: 0.9rem;">PCB integrating Photodetector and TIA supporting 10GBaud NRZ signals.</p>
+                        <img src="key_projects/TIA.png" alt="TIA Circuit" class="display-img" style="height: 180px;">
                     </div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="card" style="margin:0; min-height: 200px;">
+                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">ISRO NIR Laser Platform</div>
                         <p style="font-size: 0.9rem;">Laser-based setup for emulating single-event radiation effects on ICs.</p>
+                        <img src="key_projects/LASER.jpg" alt="Laser Setup" class="display-img" style="height: 180px;">
                     </div>
                 </div>
             </div>
@@ -272,7 +273,7 @@
         <a href="https://linkedin.com" style="margin: 0 15px;">LinkedIn</a>
         <a href="https://github.com/Tito047" style="margin: 0 15px;">GitHub</a>
     </div>
-    <div style="font-size: 0.85rem; opacity: 0.6;">© 2026 Shubham Roy | Hardware & Photonics Portfolio</div>
+    <div style="font-size: 0.85rem; opacity: 0.6;">© 2026 Shubham Roy | Engineering Portfolio</div>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
