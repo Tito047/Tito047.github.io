@@ -29,14 +29,9 @@
             line-height: 1.6;
         }
 
-        /* Hero Header with Background Image */
         header {
-            position: relative;
-            background: linear-gradient(rgba(22, 27, 34, 0.8), rgba(22, 27, 34, 0.9)), 
-                        url('datacenter.png'); /* Using your datacenter image as a backdrop */
-            background-size: cover;
-            background-position: center;
-            padding: 100px 20px;
+            background: var(--header-bg);
+            padding: 80px 20px;
             text-align: center;
             border-bottom: 1px solid var(--border);
             display: flex;
@@ -51,8 +46,7 @@
             border: 3px solid var(--photonics-cyan);
             object-fit: cover;
             margin-bottom: 20px;
-            box-shadow: 0 0 30px rgba(0, 242, 255, 0.4);
-            z-index: 1;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
         }
 
         header h1 { 
@@ -60,16 +54,14 @@
             font-size: clamp(32px, 5vw, 48px); 
             color: white;
             letter-spacing: -1px;
-            z-index: 1;
         }
 
         header h3 { 
             margin: 10px 0 0 0; 
             font-weight: 400; 
-            color: var(--photonics-cyan);
+            color: var(--accent-color);
             font-family: 'JetBrains Mono', monospace;
             font-size: clamp(14px, 2vw, 18px);
-            z-index: 1;
         }
 
         section {
@@ -139,26 +131,6 @@
             object-fit: cover;
             border: 1px solid var(--border);
             margin-top: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .display-img:hover {
-            transform: scale(1.02);
-            border-color: var(--photonics-cyan);
-        }
-
-        /* 2x2 Technical Grid Styling */
-        .tech-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .tech-grid img {
-            width: 100%;
-            border-radius: 4px;
-            border: 1px solid var(--border);
         }
 
         .gallery-grid {
@@ -215,7 +187,6 @@
         @media (max-width: 768px) {
             .card { flex-direction: column; text-align: center; }
             .gallery-grid { grid-template-columns: 1fr; }
-            .tech-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -260,12 +231,6 @@
             <div style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px;">Oct 2024 – Present</div>
             Power Management IC for memory. Designed LDOs, Bias Generators, and Oscillators.
         </div>
-        <div class="tech-grid" style="max-width: 250px;">
-            <img src="analog_photonics.png" alt="Tech 1">
-            <img src="analog_photonics_1.png" alt="Tech 2">
-            <img src="analog_photonics_1.png" alt="Tech 3">
-            <img src="analog_photonics.png" alt="Tech 4">
-        </div>
     </div>
 
     <div class="card" data-aos="fade-up" data-aos-delay="100">
@@ -299,8 +264,15 @@
             <div class="gallery-grid">
                 <img src="IITB/HSSICS_TEAM.jpg" alt="Team" class="display-img">
                 <img src="IITB/EIC_PIC.jpg" alt="EIC PIC" class="display-img">
-                <img src="IITB/CONVOCATION.png" alt="Convocation" class="display-img">
+                <img src="IITB/CONVOCATION.jpeg" alt="Convocation" class="display-img">
             </div>
+        </div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="card-content">
+            <div class="highlight-text">B.Tech – Electronics & Communication</div>
+            <div style="color: var(--accent-color); font-size: 0.95rem;">IEM | 2017 – 2021</div>
         </div>
     </div>
 </section>
@@ -310,20 +282,20 @@
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start; min-height: 450px;">
+                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start; min-height: 420px;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">10Gbps Optoelectronic Receiver</div>
                         <p style="font-size: 0.9rem;">PCB integrating Photodetector and TIA supporting 10GBaud NRZ signals.</p>
-                        <img src="analog_photonics.png" alt="Receiver" class="display-img">
+                        <img src="key_projects/TIA.png" alt="TIA" class="display-img">
                     </div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start; min-height: 450px;">
+                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start; min-height: 420px;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">ISRO NIR Laser Platform</div>
                         <p style="font-size: 0.9rem;">Laser-based setup for emulating radiation effects on ICs.</p>
-                        <img src="analog_photonics_1.png" alt="Laser" class="display-img">
+                        <img src="key_projects/LASER.jpg" alt="Laser" class="display-img">
                     </div>
                 </div>
             </div>
