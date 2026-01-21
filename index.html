@@ -106,7 +106,7 @@
             object-fit: contain;
         }
 
-        .card-content { flex-grow: 1; width: 100%; }
+        .card-content { flex-grow: 1; }
 
         .highlight-text {
             color: white;
@@ -114,14 +114,19 @@
             font-size: 1.15rem;
         }
 
-        /* Image Display Styles */
+        /* Image Display Styles for Projects and Education */
         .display-img {
             width: 100%;
             border-radius: 8px;
             object-fit: cover;
             border: 1px solid var(--border);
             margin-top: 15px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .display-img:hover {
+            transform: scale(1.02);
+            border-color: var(--photonics-cyan);
         }
 
         .gallery-grid {
@@ -129,7 +134,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 15px;
             width: 100%;
-            margin-top: 15px;
         }
 
         .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
@@ -216,7 +220,7 @@
     <h2>Education</h2>
     
     <div class="card" data-aos="fade-up" style="flex-direction: column; align-items: flex-start;">
-        <div class="card-content">
+        <div class="card-content" style="width: 100%;">
             <div class="highlight-text">M.Tech – Electrical Engineering</div>
             <div style="color: var(--accent-color); font-size: 0.95rem;">IIT Bombay | 2021 – 2024</div>
             <p style="margin: 10px 0;">Specialization: Integrated Circuits and Systems</p>
@@ -241,20 +245,20 @@
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start; min-height: 400px;">
+                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">10Gbps Optoelectronic Receiver</div>
                         <p style="font-size: 0.9rem;">PCB integrating Photodetector and TIA supporting 10GBaud NRZ signals.</p>
-                        <img src="key_projects/TIA.png" alt="TIA Circuit" class="display-img">
+                        <img src="key_projects/TIA.png" alt="TIA Circuit" class="display-img" style="height: 180px;">
                     </div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start; min-height: 400px;">
+                <div class="card" style="margin:0; flex-direction: column; align-items: flex-start;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">ISRO NIR Laser Platform</div>
                         <p style="font-size: 0.9rem;">Laser-based setup for emulating single-event radiation effects on ICs.</p>
-                        <img src="key_projects/LASER.jpg" alt="Laser Setup" class="display-img">
+                        <img src="key_projects/LASER.jpg" alt="Laser Setup" class="display-img" style="height: 180px;">
                     </div>
                 </div>
             </div>
