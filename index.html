@@ -49,7 +49,7 @@
             font-weight: 400; 
             color: var(--accent-color);
             font-family: 'JetBrains Mono', monospace;
-            font-size: clamp(14px, 2.5vw, 19px);
+            font-size: clamp(14px, 2.5vw, 18px);
             letter-spacing: 0.5px;
         }
 
@@ -77,8 +77,8 @@
             border: 1px solid var(--border);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
-            gap: 20px;
-            align-items: flex-start;
+            gap: 25px;
+            align-items: center;
         }
 
         .card:hover {
@@ -87,22 +87,23 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
-        .logo-container {
-            width: 60px;
-            height: 60px;
+        /* Logo Styling for your uploaded files */
+        .logo-box {
+            width: 70px;
+            height: 70px;
             background: white;
-            border-radius: 10px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            padding: 5px;
+            padding: 8px;
             overflow: hidden;
         }
 
-        .logo-container img {
-            width: 100%;
-            height: 100%;
+        .logo-box img {
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
         }
 
@@ -111,7 +112,7 @@
         .highlight-text {
             color: white;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
 
         .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
@@ -126,10 +127,11 @@
         }
 
         .swiper { width: 100%; padding-bottom: 50px; }
+        .swiper-pagination-bullet { background: var(--accent-color); }
         
         footer {
             text-align: center;
-            padding: 50px;
+            padding: 60px;
             background: var(--header-bg);
             border-top: 1px solid var(--border);
         }
@@ -138,14 +140,14 @@
         a:hover { color: var(--photonics-cyan); }
 
         @media (max-width: 600px) {
-            .card { flex-direction: column; }
+            .card { flex-direction: column; text-align: center; align-items: center; }
         }
     </style>
 </head>
 
 <body>
 
-<header data-aos="fade-in">
+<header data-aos="fade-down">
     <h1>Shubham Roy</h1>
     <h3>Hardware System Engineer | Analog & Photonics Engineer</h3>
 </header>
@@ -163,56 +165,56 @@
 </section>
 
 <section>
-    <h2>Work Experience</h2>
+    <h2 data-aos="fade-right">Work Experience</h2>
     
     <div class="card" data-aos="fade-up">
-        <div class="logo-container">
-            <img src="https://logo.clearbit.com/samsung.com" alt="Samsung">
+        <div class="logo-box">
+            <img src="SAMSUNG.png" alt="Samsung">
         </div>
         <div class="card-content">
             <div class="highlight-text">Senior Engineer – Samsung Semiconductor</div>
-            <div style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 8px;">Oct 2024 – Present</div>
+            <div style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px;">Oct 2024 – Present</div>
             Power Management IC for memory. Designed LDOs, Bias Generators, and Oscillators.
         </div>
     </div>
 
     <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <div class="logo-container">
-            <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" alt="C-DOT">
+        <div class="logo-box">
+            <img src="CDOT.png" alt="C-DOT">
         </div>
         <div class="card-content">
             <div class="highlight-text">Scientist B – C-DOT (Govt. of India)</div>
-            <div style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 8px;">Aug 2024 – Sept 2024</div>
+            <div style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px;">Aug 2024 – Sept 2024</div>
             Designed PCBs for RF systems at the Telecom Technology Centre.
         </div>
     </div>
 
     <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <div class="logo-container">
-            <img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Indian_Institute_of_Technology_Bombay_Logo.svg" alt="IIT Bombay">
+        <div class="logo-box">
+            <img src="IITB.png" alt="IIT Bombay">
         </div>
         <div class="card-content">
             <div class="highlight-text">Research Assistant – IIT Bombay</div>
-            <div style="color: var(--accent-color); font-size: 0.9rem; margin-bottom: 8px;">2021 – 2024</div>
-            Focus on high-speed optical interconnects for data centers.
+            <div style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px;">July 2021 – July 2024</div>
+            Focused on high-speed optical interconnects for data centers and IC design.
         </div>
     </div>
 </section>
 
 <section>
-    <h2>Key Projects</h2>
+    <h2 data-aos="fade-up">Key Projects</h2>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <div class="card" style="margin:0; height: 180px;">
+                <div class="card" style="margin:0; min-height: 200px;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">10Gbps Optoelectronic Receiver</div>
-                        <p style="font-size: 0.9rem;">Integrated Photodetector and TIA supporting 10GBaud NRZ signals on PCB.</p>
+                        <p style="font-size: 0.9rem;">PCB integrating Photodetector and TIA supporting 10GBaud NRZ signals.</p>
                     </div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="card" style="margin:0; height: 180px;">
+                <div class="card" style="margin:0; min-height: 200px;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">ISRO NIR Laser Platform</div>
                         <p style="font-size: 0.9rem;">Laser-based setup for emulating single-event radiation effects on ICs.</p>
@@ -220,7 +222,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="card" style="margin:0; height: 180px;">
+                <div class="card" style="margin:0; min-height: 200px;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">PAM4 Modulator Driver</div>
                         <p style="font-size: 0.9rem;">100GBaud PAM4 driver in ST BiCMOS 55nm with 18dB gain.</p>
@@ -232,26 +234,47 @@
     </div>
 </section>
 
-<footer>
-    <div style="margin-bottom: 20px;">
-        <a href="mailto:shubham.roy@example.com" style="margin: 0 15px;">Email</a>
-        <a href="#" style="margin: 0 15px;">LinkedIn</a>
-        <a href="#" style="margin: 0 15px;">GitHub</a>
+<section data-aos="fade-up">
+    <h2>Education</h2>
+    <div class="card" style="gap: 15px;">
+        <b>M.Tech – Electrical Engineering</b> | IIT Bombay (2021 – 2024)
     </div>
-    <div style="font-size: 0.8rem; opacity: 0.5;">© 2026 Shubham Roy | Hardware & Photonics Portoflio</div>
+    <div class="card" style="gap: 15px;">
+        <b>B.Tech – Electronics & Communication</b> | IEM (2017 – 2021)
+    </div>
+</section>
+
+<footer>
+    <div style="margin-bottom: 25px;">
+        <a href="mailto:shubham.roy@example.com" style="margin: 0 15px;">Email</a>
+        <a href="https://linkedin.com" style="margin: 0 15px;">LinkedIn</a>
+        <a href="https://github.com/Tito047" style="margin: 0 15px;">GitHub</a>
+    </div>
+    <div style="font-size: 0.85rem; opacity: 0.6;">© 2026 Shubham Roy | Engineering Portfolio</div>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script>
-    AOS.init({ duration: 900, once: true });
+    // Initialize Scroll Animations
+    AOS.init({ 
+        duration: 1000, 
+        once: true,
+        easing: 'ease-out-quad'
+    });
 
+    // Initialize Project Slider (Slide Actions)
     new Swiper(".mySwiper", {
         slidesPerView: 1,
-        spaceBetween: 20,
-        pagination: { el: ".swiper-pagination", clickable: true },
-        breakpoints: { 768: { slidesPerView: 2 } }
+        spaceBetween: 25,
+        pagination: { 
+            el: ".swiper-pagination", 
+            clickable: true 
+        },
+        breakpoints: { 
+            768: { slidesPerView: 2 } 
+        }
     });
 </script>
 
