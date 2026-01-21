@@ -1,163 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shubham Roy | Hardware & Photonics Engineer</title>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #0b3c5d;
-    color: white;
-}
-header {
-    background: #072c44;
-    padding: 30px;
-    text-align: center;
-}
-header h1 { margin: 0; font-size: 36px; }
-header h3 { margin: 5px 0; font-weight: normal; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Roy | Hardware & Photonics Engineer</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
 
-section {
-    padding: 40px;
-    max-width: 900px;
-    margin: auto;
-}
-h2 {
-    border-bottom: 2px solid #4aa3df;
-    padding-bottom: 5px;
-}
-.card {
-    background: #124f78;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 8px;
-}
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #072c44;
-}
-a { color: #7ec8ff; }
-</style>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --header-bg: #161b22;
+            --accent-color: #58a6ff;
+            --photonics-cyan: #00f2ff;
+            --card-bg: #21262d;
+            --text-main: #c9d1d9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        header {
+            background: var(--header-bg);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #30363d;
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 42px; 
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        header h3 { 
+            margin: 10px 0; 
+            font-weight: 300; 
+            color: var(--accent-color);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-left: 4px solid var(--photonics-cyan);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--photonics-cyan);
+            transform: translateX(5px);
+        }
+
+        /* Swiper / Slider Styling */
+        .swiper {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+
+        .project-slide {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .highlight-text {
+            color: var(--photonics-cyan);
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--header-bg);
+            border-top: 1px solid #30363d;
+            font-size: 0.9rem;
+        }
+
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .tag {
+            display: inline-block;
+            background: #1f2937;
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 4px;
+            border: 1px solid #30363d;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
+<header data-aos="zoom-in">
     <h1>Shubham Roy</h1>
     <h3>Hardware Enthusiast | IC & Photonics Engineer</h3>
 </header>
 
-<section>
-<h2>Area of Expertise</h2>
-<div class="card">
-High Speed Optical Interconnects, MmWave Integrated Circuits, Photonic Integrated Circuits, 
-Analog/Photonic Signal Processing, Embedded Systems, Power Management IC.
-</div>
+<section data-aos="fade-up">
+    <h2>Area of Expertise</h2>
+    <div class="card" style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <span class="tag">High Speed Optical Interconnects</span>
+        <span class="tag">MmWave Integrated Circuits</span>
+        <span class="tag">Photonic Integrated Circuits</span>
+        <span class="tag">Analog/Photonic Signal Processing</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">Power Management IC</span>
+    </div>
 </section>
 
 <section>
-<h2>Work Experience</h2>
+    <h2 data-aos="fade-right">Work Experience</h2>
+    
+    <div class="card" data-aos="fade-left">
+        <b class="highlight-text">Senior Engineer – Samsung Semiconductor</b><br>
+        <small>(Oct 2024 – Present)</small><br>
+        Power Management IC for memory. Designed LDOs, Bias Generators and Oscillators.
+    </div>
 
-<div class="card">
-<b>Senior Engineer – Samsung Semiconductor</b><br>
-(Oct 2024 – Present)<br>
-Power Management IC for memory. Designed LDOs, Bias Generators and Oscillators.
-</div>
+    <div class="card" data-aos="fade-left" data-aos-delay="100">
+        <b class="highlight-text">Scientist B – C-DOT (Govt. of India)</b><br>
+        <small>(Aug 2024 – Sept 2024)</small><br>
+        Designed PCBs for RF systems.
+    </div>
 
-<div class="card">
-<b>Scientist B – C-DOT (Govt. of India)</b><br>
-(Aug 2024 – Sept 2024)<br>
-Designed PCBs for RF systems.
-</div>
-
-<div class="card">
-<b>Research Assistant – IIT Bombay</b><br>
-(July 2021 – July 2024)<br>
-Designed circuits and systems for electronic and optical applications, 
-primarily high-speed optical interconnects for data centers.
-</div>
-
-<div class="card">
-<b>Research Intern – IIT Kharagpur & Zoological Survey of India</b><br>
-(May 2021 – July 2021)<br>
-Designed audio acquisition systems for zoological applications.
-</div>
-
-<div class="card">
-<b>Summer Intern – IIT Kharagpur</b><br>
-(June 2019 – Aug 2019)<br>
-Designed low-complexity algorithms for ECG signal processing.
-</div>
-
+    <div class="card" data-aos="fade-left" data-aos-delay="200">
+        <b class="highlight-text">Research Assistant – IIT Bombay</b><br>
+        <small>(July 2021 – July 2024)</small><br>
+        High-speed optical interconnects for data centers.
+    </div>
 </section>
 
 <section>
-<h2>Key Projects</h2>
-
-<div class="card">
-<b>10Gbps Optoelectronic Receiver Module</b><br>
-Designed PCB integrating Photodetector and Transimpedance Amplifier supporting 10GBaud NRZ signals.
-</div>
-
-<div class="card">
-<b>NIR Laser Platform for Radiation Strike Emulation (ISRO Sponsored)</b><br>
-Developed a near-infrared laser-based setup to emulate single-event radiation effects on ICs.
-</div>
-
-<div class="card">
-<b>Mach Zehnder Modulator Driver</b><br>
-Designed 100GBaud PAM4 driver in ST BiCMOS 55nm with 8–18 dB gain and 632mW power.
-</div>
-
-<div class="card">
-<b>Photonic IC Design</b><br>
-Designed and taped out Mach-Zehnder Interferometers and wavelength filters using 220nm SOI SiEPIC PDK.
-</div>
-
+    <h2 data-aos="fade-up">Key Projects</h2>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide project-slide">
+                <div class="card">
+                    <b class="highlight-text">10Gbps Optoelectronic Receiver</b><br>
+                    PCB integrating Photodetector and TIA supporting 10GBaud NRZ signals.
+                </div>
+            </div>
+            <div class="swiper-slide project-slide">
+                <div class="card">
+                    <b class="highlight-text">NIR Laser Platform</b><br>
+                    (ISRO Sponsored) Near-infrared laser setup for radiation strike emulation on ICs.
+                </div>
+            </div>
+            <div class="swiper-slide project-slide">
+                <div class="card">
+                    <b class="highlight-text">Mach Zehnder Modulator Driver</b><br>
+                    100GBaud PAM4 driver in ST BiCMOS 55nm with 8–18 dB gain.
+                </div>
+            </div>
+            <div class="swiper-slide project-slide">
+                <div class="card">
+                    <b class="highlight-text">Photonic IC Design</b><br>
+                    Taped out MZIs and wavelength filters using 220nm SOI SiEPIC PDK.
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
 </section>
 
-<section>
-<h2>Technical Proficiency</h2>
-<div class="card">
-<b>Programming:</b> VerilogA, Verilog, Python, C <br>
-<b>Analog IC:</b> Cadence Virtuoso, EMX, HFSS, ADS, LTSpice <br>
-<b>Photonic IC:</b> Lumerical, KLayout <br>
-<b>PCB:</b> Altium Designer <br>
-<b>Embedded:</b> Quartus, Arduino <br>
-<b>Data:</b> MATLAB, Python
-</div>
+<section data-aos="fade-up">
+    <h2>Technical Proficiency</h2>
+    <div class="card">
+        <p><b>Programming:</b> <span class="tag">VerilogA</span> <span class="tag">Verilog</span> <span class="tag">Python</span> <span class="tag">C</span></p>
+        <p><b>Analog IC:</b> <span class="tag">Cadence Virtuoso</span> <span class="tag">EMX</span> <span class="tag">HFSS</span> <span class="tag">ADS</span></p>
+        <p><b>Photonic IC:</b> <span class="tag">Lumerical</span> <span class="tag">KLayout</span></p>
+        <p><b>PCB & Data:</b> <span class="tag">Altium Designer</span> <span class="tag">MATLAB</span></p>
+    </div>
 </section>
 
-<section>
-<h2>Education</h2>
-
-<div class="card">
-<b>M.Tech – Electrical Engineering</b><br>
-IIT Bombay (2021 – 2024)<br>
-Specialization: Integrated Circuits and Systems
-</div>
-
-<div class="card">
-<b>B.Tech – Electronics & Communication</b><br>
-Institute of Engineering & Management (2017 – 2021)
-</div>
-
-</section>
-
-<section>
-<h2>Aim</h2>
-<div class="card">
-Work on mmWave Circuits and Photonic Systems in optical interconnects for data centers.
-</div>
+<section data-aos="fade-up">
+    <h2>Education</h2>
+    <div class="card">
+        <b>M.Tech – Electrical Engineering</b> | IIT Bombay (2021 – 2024)
+    </div>
+    <div class="card">
+        <b>B.Tech – Electronics & Communication</b> | IEM (2017 – 2021)
+    </div>
 </section>
 
 <footer>
-Contact: your.email@example.com <br>
-LinkedIn | GitHub links here
+    Contact: <a href="mailto:your.email@example.com">your.email@example.com</a> <br><br>
+    <a href="#">LinkedIn</a> | <a href="#">GitHub</a>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    // Initialize Animations
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+
+    // Initialize Slider
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            768: { slidesPerView: 2 }
+        }
+    });
+</script>
 
 </body>
 </html>
