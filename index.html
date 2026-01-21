@@ -29,28 +29,40 @@
             line-height: 1.6;
         }
 
+        /* New Profile Header Layout */
         header {
             background: var(--header-bg);
-            padding: 100px 20px;
+            padding: 80px 20px;
             text-align: center;
             border-bottom: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--photonics-cyan);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
         }
 
         header h1 { 
             margin: 0; 
-            font-size: clamp(36px, 6vw, 52px); 
+            font-size: clamp(32px, 5vw, 48px); 
             color: white;
-            font-weight: 600;
             letter-spacing: -1px;
         }
 
         header h3 { 
-            margin: 20px 0 0 0; 
+            margin: 10px 0 0 0; 
             font-weight: 400; 
             color: var(--accent-color);
             font-family: 'JetBrains Mono', monospace;
-            font-size: clamp(14px, 2.5vw, 18px);
-            letter-spacing: 0.5px;
+            font-size: clamp(14px, 2vw, 18px);
         }
 
         section {
@@ -121,13 +133,11 @@
             object-fit: cover;
             border: 1px solid var(--border);
             margin-top: 15px;
-            transition: transform 0.3s ease;
         }
 
-        /* Flexible Grid for MTech Section */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
             width: 100%;
             margin-top: 15px;
@@ -153,11 +163,11 @@
             border-top: 1px solid var(--border);
         }
 
-        a { color: var(--accent-color); text-decoration: none; transition: 0.2s; }
-        a:hover { color: var(--photonics-cyan); }
+        a { color: var(--accent-color); text-decoration: none; }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .card { flex-direction: column; text-align: center; }
+            .gallery-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -165,6 +175,7 @@
 <body>
 
 <header data-aos="fade-down">
+    <img src="shubham.jpg" alt="Shubham Roy" class="profile-img">
     <h1>Shubham Roy</h1>
     <h3>Hardware System Engineer | Analog & Photonics Engineer</h3>
 </header>
@@ -182,7 +193,7 @@
 </section>
 
 <section>
-    <h2 data-aos="fade-right">Work Experience</h2>
+    <h2>Work Experience</h2>
     
     <div class="card" data-aos="fade-up">
         <div class="logo-box"><img src="SAMSUNG.png" alt="Samsung"></div>
@@ -207,7 +218,7 @@
         <div class="card-content">
             <div class="highlight-text">Research Assistant – IIT Bombay</div>
             <div style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px;">July 2021 – July 2024</div>
-            Focused on high-speed optical interconnects for data centers and IC design.
+            Focused on high-speed optical interconnects for data centers.
         </div>
     </div>
 </section>
@@ -222,9 +233,9 @@
             <p style="margin: 10px 0;">Specialization: Integrated Circuits and Systems</p>
             
             <div class="gallery-grid">
-                <img src="IITB/HSSICS_TEAM.jpg" alt="HSSICs Team" class="display-img">
+                <img src="IITB/HSSICS_TEAM.jpg" alt="Team" class="display-img">
                 <img src="IITB/EIC_PIC.jpg" alt="EIC PIC" class="display-img">
-                <img src="IITB/CONVOCATION.png" alt="Convocation" class="display-img">
+                <img src="IITB/CONVOCATION.jpeg" alt="Convocation" class="display-img">
             </div>
         </div>
     </div>
@@ -238,7 +249,7 @@
 </section>
 
 <section>
-    <h2 data-aos="fade-up">Key Projects</h2>
+    <h2>Key Projects</h2>
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -246,7 +257,7 @@
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">10Gbps Optoelectronic Receiver</div>
                         <p style="font-size: 0.9rem;">PCB integrating Photodetector and TIA supporting 10GBaud NRZ signals.</p>
-                        <img src="key_projects/TIA.png" alt="TIA Circuit" class="display-img">
+                        <img src="key_projects/TIA.png" alt="TIA" class="display-img">
                     </div>
                 </div>
             </div>
@@ -254,8 +265,8 @@
                 <div class="card" style="margin:0; flex-direction: column; align-items: flex-start; min-height: 420px;">
                     <div class="card-content">
                         <div class="highlight-text" style="color: var(--photonics-cyan)">ISRO NIR Laser Platform</div>
-                        <p style="font-size: 0.9rem;">Laser-based setup for emulating single-event radiation effects on ICs.</p>
-                        <img src="key_projects/LASER.jpg" alt="Laser Setup" class="display-img">
+                        <p style="font-size: 0.9rem;">Laser-based setup for emulating radiation effects on ICs.</p>
+                        <img src="key_projects/LASER.jpg" alt="Laser" class="display-img">
                     </div>
                 </div>
             </div>
@@ -288,4 +299,3 @@
 
 </body>
 </html>
-
