@@ -29,10 +29,14 @@
             line-height: 1.6;
         }
 
-        /* New Profile Header Layout */
+        /* Hero Banner with Background Image */
         header {
-            background: var(--header-bg);
-            padding: 80px 20px;
+            position: relative;
+            background: linear-gradient(rgba(22, 27, 34, 0.85), rgba(22, 27, 34, 0.95)), 
+                        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
             text-align: center;
             border-bottom: 1px solid var(--border);
             display: flex;
@@ -47,7 +51,8 @@
             border: 3px solid var(--photonics-cyan);
             object-fit: cover;
             margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.4);
+            z-index: 1;
         }
 
         header h1 { 
@@ -55,6 +60,7 @@
             font-size: clamp(32px, 5vw, 48px); 
             color: white;
             letter-spacing: -1px;
+            z-index: 1;
         }
 
         header h3 { 
@@ -63,6 +69,7 @@
             color: var(--accent-color);
             font-family: 'JetBrains Mono', monospace;
             font-size: clamp(14px, 2vw, 18px);
+            z-index: 1;
         }
 
         section {
@@ -90,7 +97,7 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             gap: 25px;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .card:hover {
@@ -133,6 +140,11 @@
             object-fit: cover;
             border: 1px solid var(--border);
             margin-top: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .display-img:hover {
+            transform: scale(1.02);
         }
 
         .gallery-grid {
@@ -166,7 +178,7 @@
         a { color: var(--accent-color); text-decoration: none; }
 
         @media (max-width: 768px) {
-            .card { flex-direction: column; text-align: center; }
+            .card { flex-direction: column; text-align: center; align-items: center; }
             .gallery-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -201,6 +213,7 @@
             <div class="highlight-text">Senior Engineer – Samsung Semiconductor</div>
             <div style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px;">Oct 2024 – Present</div>
             Power Management IC for memory. Designed LDOs, Bias Generators, and Oscillators.
+            
         </div>
     </div>
 
@@ -210,6 +223,7 @@
             <div class="highlight-text">Scientist B – C-DOT (Govt. of India)</div>
             <div style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px;">Aug 2024 – Sept 2024</div>
             Designed PCBs for RF systems at the Telecom Technology Centre.
+            
         </div>
     </div>
 
@@ -219,6 +233,7 @@
             <div class="highlight-text">Research Assistant – IIT Bombay</div>
             <div style="color: var(--accent-color); font-size: 0.95rem; margin-bottom: 5px;">July 2021 – July 2024</div>
             Focused on high-speed optical interconnects for data centers.
+            
         </div>
     </div>
 </section>
@@ -258,6 +273,7 @@
                         <div class="highlight-text" style="color: var(--photonics-cyan)">10Gbps Optoelectronic Receiver</div>
                         <p style="font-size: 0.9rem;">PCB integrating Photodetector and TIA supporting 10GBaud NRZ signals.</p>
                         <img src="key_projects/TIA.png" alt="TIA" class="display-img">
+                        
                     </div>
                 </div>
             </div>
@@ -267,6 +283,7 @@
                         <div class="highlight-text" style="color: var(--photonics-cyan)">ISRO NIR Laser Platform</div>
                         <p style="font-size: 0.9rem;">Laser-based setup for emulating radiation effects on ICs.</p>
                         <img src="key_projects/LASER.jpg" alt="Laser" class="display-img">
+                        
                     </div>
                 </div>
             </div>
@@ -299,4 +316,3 @@
 
 </body>
 </html>
-
